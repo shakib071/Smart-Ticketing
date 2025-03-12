@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <button onclick="generatePDF()">Download PDF</button>
+
+    <script>
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Basic text
+            doc.setFontSize(20);
+            doc.text("Simple PDF Demo", 10, 20);
+
+            // Table data
+            doc.autoTable({
+                startY: 30,
+                head: [['ID', 'Item', 'Price']],
+                body: [
+                    [1, 'Laptop', '$999'],
+                    [2, 'Phone', '$699'],
+                    [3, 'Tablet', '$399']
+                ]
+            });
+
+            // Save PDF
+            doc.save("demo.pdf");
+        }
+    </script>
+</body>
+</html>

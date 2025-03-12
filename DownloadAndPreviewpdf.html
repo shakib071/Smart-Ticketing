@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <style>
+        #previewContainer {
+            margin: 20px;
+            border: 1px solid #ccc;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="downloadPDF()">Download PDF</button>
+    <button onclick="previewPDF()">Preview PDF</button>
+    <div id="previewContainer"></div>
+
+    <script>
+        function createPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Add content
+            doc.setFontSize(20);
+            doc.text("Invoice Report", 10, 20);
+            
+            doc.autoTable({
+                startY: 30,
+                head: [['ID', 'Item', 'Qty', 'Price']],
+                body: [
+                    [1, 'Laptop', 2, '$1998'],
+                    [2, 'Mouse', 5, '$50'],
+                    [3, 'Keyboard', 2, '$100']
+                ]
+            });
+
+            return doc;
+        }
+
+        function downloadPDF() {
+            const doc = createPDF();
+            doc.save("invoice.pdf");
+        }
+
+        function previewPDF() {
+            const doc = createPDF();
+            const pdfBlob = doc.output('blob');
+            const url = URL.createObjectURL(pdfBlob);
+            
+            // Open in new tab
+            window.open(url, '_blank');
+            
+            // Alternative: Show in iframe
+            // const iframe = document.createElement('iframe');
+            // iframe.style.width = '100%';
+            // iframe.style.height = '500px';
+            // iframe.src = url;
+            // document.getElementById('previewContainer').appendChild(iframe);
+            // document.getElementById('previewContainer').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
