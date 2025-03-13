@@ -22,7 +22,7 @@ const cities = [
 ];
 
 //if we use this we can use this data from another file
-export default cities;
+// export default cities;
 // , if cities is an array of city names, another file can import it like this:
 // This will import the cities object from data.js and log it to the console.
 
@@ -71,6 +71,7 @@ function TravelData(city , destination) {
 
 
 
+//data of travel 
 
 const travelData = {
 
@@ -2979,8 +2980,7 @@ const travelData = {
 };
 
 
-
-export { travelData };
+// export {travelData};
 
 
 
