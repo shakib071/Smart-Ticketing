@@ -63,7 +63,7 @@ document.getElementById('getDestination').addEventListener('click', () => {
 
     //Est time 
     const est_time = calculateTimeDifference(travelData[boardingPlace][DropingPlace].boardingTime,travelData[boardingPlace][DropingPlace].arrivalTime);
-    console.log(est_time);
+    
     changeInnerTextbyId('est-time',est_time);
 
 } );
