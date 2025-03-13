@@ -100,8 +100,27 @@ Array.from(getSeats).forEach(element => {
             element.classList.remove('bg-green-500','text-white');
             NoOfSeatSeatSelected--;
         }
-        console.log('seat selected',NoOfSeatSeatSelected);
-        console.log(clickCount[element.innerText]);
+        
+        // add the seat and fare in selected seats section
+        // if(NoOfSeatSeatSelected > 0){
+
+        //     let selectedSeatParrentDiv = document.getElementById('selected-seats-add');
+
+        //     let ChildDiv = document.createElement('div');
+        //     ChildDiv.innerHTML = `
+        //         <div class="flex justify-between text-[rgba(3,7,18,0.6)] text-sm xl:text-xl mb-3">
+        //             <p>C2</p>
+        //             <p>Economoy</p>
+        //             <p>550</p>
+        //         </div>
+        //     `;
+        //     selectedSeatParrentDiv.appendChild(ChildDiv);
+
+        //     console.log(selectedSeatParrentDiv);
+        // }
+   
+
+
     })
 });
 
