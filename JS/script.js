@@ -75,9 +75,33 @@ document.getElementById('getDestination').addEventListener('click', () => {
 
 const getSeats = document.getElementsByClassName('seat-select');
 
+
+let clickCount = {
+    
+};
+
+let NoOfSeatSeatSelected = 0;
+
 Array.from(getSeats).forEach(element => {
     element.addEventListener('click', () => {
-        console.log(element.innerText);
+        
+        if(element.innerText in clickCount){
+            clickCount[element.innerText]++;
+        }
+        else{
+            clickCount[element.innerText]=1;
+        }
+        
+        if(clickCount[element.innerText] % 2 === 1){
+            element.classList.add('bg-green-500','text-white');
+            NoOfSeatSeatSelected++;
+        }
+        else{
+            element.classList.remove('bg-green-500','text-white');
+            NoOfSeatSeatSelected--;
+        }
+        console.log('seat selected',NoOfSeatSeatSelected);
+        console.log(clickCount[element.innerText]);
     })
 })
 
