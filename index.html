@@ -247,7 +247,7 @@
                                 </div>
                                 <div>
                                     <p class="text-[17px] md:text-2xl lg:text-3xl xl:text-5xl font-medium mb-3">Shakib Paribahan</p>
-                                    <p class=" text-[10px] md:text-sm lg:text-2xl text-[rgba(3,7,18,0.6)]">Coach-009-WEB ! AC_Business</p>
+                                    <p  class=" text-[10px] md:text-sm lg:text-2xl text-[rgba(3,7,18,0.6)]">Coach- <span id="coachNo" ></span>  ! <span id="acOrNot"></span>_Business</p>
                                 </div>
                             </div>
                             
@@ -266,22 +266,22 @@
     
                             <div class="flex justify-between border-b-4 border-dotted border-b-gray-300 p-3 lg:p-5">
                                 <p class="text-sm md:text-lg lg:text-2xl text-[rgba(3,7,18,0.6)]">Route</p>
-                                <p class="text-sm md:text-lg lg:text-2xl font-medium">Dhaka-Sylhet</p>
+                                <p class="text-sm md:text-lg lg:text-2xl font-medium"><span id="routeFrom"></span>-<span id="routeTo"></span></p>
                             </div>
     
     
                             <div class="flex justify-between border-b-4 border-dotted border-b-gray-300 p-3 lg:p-5">
                                 <p class="text-sm md:text-xl lg:text-2xl text-[rgba(3,7,18,0.6)]">Departure Time</p>
-                                <p class="text-sm md:text-xl lg:text-2xl font-medium">9:00 PM</p>
+                                <p id="departureTime" class="text-sm md:text-xl lg:text-2xl font-medium"></p>
                             </div>
     
                             <div class="flex justify-between gap-1 md:gap-3 mt-2 md:mt-0 p-1 md:p-3 lg:p-5">
     
-                                <p class="text-xs md:text-sm lg:text-lg xl:text-2xl font-medium text-[rgba(3,7,18,0.8)]  bg-[rgba(3,7,18,0.1)] px-3 xl:px-5 py-3 lg:py-4 rounded-2xl">Boarding Point - Laxmipur</p>
+                                <p class="text-xs md:text-sm lg:text-lg xl:text-2xl font-medium text-[rgba(3,7,18,0.8)]  bg-[rgba(3,7,18,0.1)] px-3 xl:px-5 py-3 lg:py-4 rounded-2xl">Boarding Point - <span id="boarding-point"></span></p>
     
-                                <p class="text-xs md:text-sm lg:text-lg xl:text-2xl font-medium text-[rgba(3,7,18,0.8)]  bg-[rgba(3,7,18,0.1)] px-3 xl:px-5 py-3 lg:py-4 rounded-2xl">Dropping Point - Bogura</p>
+                                <p class="text-xs md:text-sm lg:text-lg xl:text-2xl font-medium text-[rgba(3,7,18,0.8)]  bg-[rgba(3,7,18,0.1)] px-3 xl:px-5 py-3 lg:py-4 rounded-2xl">Dropping Point - <span id="dropping-point"></span></p>
     
-                                <p class="text-xs md:text-sm lg:text-lg xl:text-2xl font-medium text-[rgba(3,7,18,0.8)]  bg-[rgba(3,7,18,0.1)] px-3 xl:px-5 py-3 lg:py-4 rounded-2xl">Est. Time - 11 Hour</p>
+                                <p class="text-xs md:text-sm lg:text-lg xl:text-2xl font-medium text-[rgba(3,7,18,0.8)]  bg-[rgba(3,7,18,0.1)] px-3 xl:px-5 py-3 lg:py-4 rounded-2xl">Est. Time - <span id="est-time"></span></p>
     
                             </div>
     
@@ -662,6 +662,7 @@
 
 
     <script src="JS/data.js"></script>
+    <script src="JS/functions.js"></script>
     <script src="JS/script.js"></script>
 
 </body>
