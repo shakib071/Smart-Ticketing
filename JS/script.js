@@ -103,7 +103,7 @@ Array.from(getSeats).forEach(element => {
         console.log('seat selected',NoOfSeatSeatSelected);
         console.log(clickCount[element.innerText]);
     })
-})
+});
 
 
 
