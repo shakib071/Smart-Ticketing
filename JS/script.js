@@ -33,7 +33,7 @@ document.getElementById('getDestination').addEventListener('click', () => {
 
     const boardingPlace = FromSelectedOption.value;
     const DropingPlace = ToSelectedOption.value;
-    console.log(travelData[boardingPlace][DropingPlace].coachNum)
+   
     // put coachNo 
     changeInnerTextbyId('coachNo',travelData[boardingPlace][DropingPlace].coachNum);
 
