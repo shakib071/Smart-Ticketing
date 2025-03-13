@@ -28,8 +28,9 @@ for(let i=0 ; i<destinations.length ; i++){
 document.getElementById('getDestination').addEventListener('click', () => {
     
     const FromSelectedOption = FromBox.options[FromBox.selectedIndex];
+    const ToSelectedOption = ToBox.options[ToBox.selectedIndex];
 
-    console.log(FromSelectedOption.value);
+    console.log(FromSelectedOption.value,ToSelectedOption.value);
 
 } );
 
